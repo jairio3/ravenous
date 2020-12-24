@@ -20,10 +20,10 @@ export class Business extends React.Component {
         <div className="image-container">
           <img src={business.imageSrc} alt=''/>
         </div>
-        <h2>MarginOtto Pizzeria</h2>
+        <h2>{business.name}</h2>
         <div className="Business-information">
           <div className="Business-address">
-            <p>{business.imageSrc}</p>
+            <p>{business.address}</p>
             <p>{business.city}</p>
             <p>{business.state} {business.zipCode}</p>
           </div>
