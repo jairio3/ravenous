@@ -15,6 +15,8 @@ export class SearchBar extends React.Component {
       'Highest Rated': 'rating',
       'Most Reviewed': 'review_count'
     };
+    this.handleTermChange = this.handleTermChange.bind(this);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
   }
 
   getSortByClass(sortByOption) {
@@ -26,6 +28,14 @@ export class SearchBar extends React.Component {
 
   handleSortByChange(sortByOption) {
     this.setState( { sortBy: sortByOption} )
+  }
+
+  handleTermChange(e) {
+    this.setState({term: e.target.value});
+  }
+
+  handleLocationChange(e) {
+    this.setState({location: e.target.value});
   }
 
   renderSortByOptions(sortByOptions) {
